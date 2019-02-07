@@ -21,8 +21,8 @@ let players = [
 	{name: 'Charlie Soup', strikeouts: 10}
 ];
 
-let averageStrikeouts = getSumFromProperty('strikeouts', players);
-// averageStrikeouts === 8.333333333333334
+let totalStrikeouts = getSumFromProperty('strikeouts', players);
+// totalStrikeouts === 50
 
 
 players = [
@@ -34,8 +34,8 @@ players = [
 	{stats: {strikeouts: 15}}
 ];
 
-averageStrikeouts = getSumFromProperty('stats.strikeouts', players);
-// averageStrikeouts === 35.833333333333336
+totalStrikeouts = getSumFromProperty('stats.strikeouts', players);
+// totalStrikeouts === 215
 
 
 let numberGroups = [
@@ -44,9 +44,9 @@ let numberGroups = [
 	[[21, 25], [26, 30]],
 	[[31, 35], [36, 40]]
 ];
-// get the average of [1,11,21,31]
-let average = getSumFromProperty('0.0', numberGroups);
-// average === 16
+// get the sum of [1,11,21,31]
+let sum = getSumFromProperty('0.0', numberGroups);
+// sum === 64
 
 
 players = [
@@ -56,7 +56,7 @@ players = [
 	{name: 'Kelly Rogers', strikeouts: 2}
 ];
 
-averageStrikeouts = getSumFromProperty('strikeouts', players);
+totalStrikeouts = getSumFromProperty('strikeouts', players);
 // console: 'Error: the array contains a value that is not a number.'
 
 players = [
@@ -66,7 +66,7 @@ players = [
 	{name: 'Willy'}  // missing property will trigger error.
 ];
 
-averageStrikeouts = getSumFromProperty('strikeouts', players);
+totalStrikeouts = getSumFromProperty('strikeouts', players);
 // console: 'Error: the array contains a value that is not a number.'
 // (In this case, the value that is not a number is undefined)
 ```
