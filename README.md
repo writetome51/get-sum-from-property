@@ -76,7 +76,7 @@ totalStrikeouts = getSumFromProperty('strikeouts', players);
 You must have npm installed first.  Then, in the command line:
 
 ```bash
-npm install @writetome51/get-average-from-property
+npm install @writetome51/get-sum-from-property
 ```
 ## Loading
 ```
