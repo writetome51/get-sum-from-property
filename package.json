@@ -1,0 +1,31 @@
+{
+  "name": "@writetome51/get-sum-from-property",
+  "version": "1.0.0",
+  "description": "Gets values of a particular property found in each object in array of objects, and returns their sum",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/writetome51/get-sum-from-property.git"
+  },
+  "keywords": [
+    "get",
+    "sum",
+    "value",
+    "property",
+    "objects"
+  ],
+  "author": "Steve Thompson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/writetome51/get-sum-from-property/issues"
+  },
+  "homepage": "https://github.com/writetome51/get-sum-from-property#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "@writetome51/get-sum-average-product": "~1.0.4",
+    "@writetome51/get-array-from-property": "~1.1.0"
+  }
+}
