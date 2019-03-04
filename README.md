@@ -1,13 +1,12 @@
-# getSumFromProperty()
-## getSumFromProperty(property, objects): number
+# getSumFromProperty(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;property,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;objects<br>): number
 
-Returns sum of <b>property</b> found in each of <b>objects</b>.   
-Value of <b>property</b> in each object must be type 'number', and must be a finite number.  
-The parameter <b>property</b> is a string that can include dot notation  
+Returns sum of `property` found in each of `objects`.   
+Value of `property` in each object must be type 'number', and must be a finite number.  
+The parameter `property` is a string that can include dot notation  
 ( i.e,  `'property.subproperty.subsubproperty'` ) .  
 
-Note:  <b>property</b> does not have to be an object key. It can also be an array index.  
-If you are getting the value of a nested array index, here you need to use dot-notation  
+Note:  `property` does not have to be an object key. It can also be an array index.  
+If you are referring to an array index, here you need to use dot-notation  
 and not square braces.  Example: `'1.0' instead of [1][0]`
 
 ## Examples
@@ -21,8 +20,8 @@ let players = [
 	{name: 'Charlie Soup', strikeouts: 10}
 ];
 
-let totalStrikeouts = getSumFromProperty('strikeouts', players);
-// totalStrikeouts === 50
+getSumFromProperty('strikeouts', players);
+    // --> 50
 
 
 players = [
@@ -34,8 +33,8 @@ players = [
 	{stats: {strikeouts: 15}}
 ];
 
-totalStrikeouts = getSumFromProperty('stats.strikeouts', players);
-// totalStrikeouts === 215
+getSumFromProperty('stats.strikeouts', players);
+    // --> 215
 
 
 let numberGroups = [
@@ -45,8 +44,8 @@ let numberGroups = [
 	[[31, 35], [36, 40]]
 ];
 // get the sum of [1,11,21,31]
-let sum = getSumFromProperty('0.0', numberGroups);
-// sum === 64
+getSumFromProperty('0.0', numberGroups);
+    // --> 64
 
 
 players = [
@@ -56,7 +55,7 @@ players = [
 	{name: 'Kelly Rogers', strikeouts: 2}
 ];
 
-totalStrikeouts = getSumFromProperty('strikeouts', players);
+getSumFromProperty('strikeouts', players);
 // console: 'Error: the array contains a value that is not a number.'
 
 players = [
@@ -66,7 +65,7 @@ players = [
 	{name: 'Willy'}  // missing property will trigger error.
 ];
 
-totalStrikeouts = getSumFromProperty('strikeouts', players);
+getSumFromProperty('strikeouts', players);
 // console: 'Error: the array contains a value that is not a number.'
 // (In this case, the value that is not a number is undefined)
 ```
