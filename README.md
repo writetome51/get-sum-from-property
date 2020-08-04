@@ -1,7 +1,7 @@
-# getSumFromProperty(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;property,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;objects<br>): number
+# getSumFromProperty(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;property: string,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;objects: object[]<br>): number
 
 Returns sum of `property` found in each of `objects`.   
-Value of `property` in each object must be type 'number', and must be a finite number.  
+Value of `property` in each object must be type 'number'.  
 The parameter `property` is a string that can include dot notation  
 ( i.e,  `'property.subproperty.subsubproperty'` ) .  
 
@@ -10,7 +10,7 @@ If you are referring to an array index, here you need to use dot-notation
 and not square braces.  Example: `'1.0' instead of [1][0]`
 
 ## Examples
-```
+```js
 let players = [
 	{name: 'Bill Mill', strikeouts: 10},
 	{name: 'Milly Buttons', strikeouts: 12},
@@ -19,7 +19,6 @@ let players = [
 	{name: 'Angus Beef', strikeouts: 11},
 	{name: 'Charlie Soup', strikeouts: 10}
 ];
-
 getSumFromProperty('strikeouts', players);
     // --> 50
 
@@ -32,7 +31,6 @@ players = [
 	{stats: {strikeouts: 10}},
 	{stats: {strikeouts: 15}}
 ];
-
 getSumFromProperty('stats.strikeouts', players);
     // --> 215
 
@@ -54,9 +52,9 @@ players = [
 	{name: 'Mick Stan', strikeouts: 5},
 	{name: 'Kelly Rogers', strikeouts: 2}
 ];
-
 getSumFromProperty('strikeouts', players);
-// console: 'Error: the array contains a value that is not a number.'
+// console: "Error: Input must be a finite number of type 'number'"
+
 
 players = [
 	{name: 'Kelly Rogers', strikeouts: 2},
@@ -64,24 +62,17 @@ players = [
 	{name: 'Charlie Soup', strikeouts: 10},
 	{name: 'Willy'}  // missing property will trigger error.
 ];
-
 getSumFromProperty('strikeouts', players);
-// console: 'Error: the array contains a value that is not a number.'
-// (In this case, the value that is not a number is undefined)
+// console: "Error: Input must be a finite number of type 'number'"
+// (In this case, the input that is not a number is undefined)
 ```
 
 ## Installation
-
-You must have npm installed first.  Then, in the command line:
-
 ```bash
-npm install @writetome51/get-sum-from-property
+npm i @writetome51/get-sum-from-property
 ```
+
 ## Loading
-```
-// If using TypeScript:
+```js
 import {getSumFromProperty} from '@writetome51/get-sum-from-property';
-// If using ES5 JavaScript:
-var getSumFromProperty = 
-    require('@writetome51/get-sum-from-property').getSumFromProperty;
 ```

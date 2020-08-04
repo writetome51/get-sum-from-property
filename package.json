@@ -1,7 +1,8 @@
 {
   "name": "@writetome51/get-sum-from-property",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Gets values of a particular property found in each object in array of objects, and returns their sum",
+  "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -26,7 +27,7 @@
   "homepage": "https://github.com/writetome51/get-sum-from-property#readme",
   "devDependencies": {},
   "dependencies": {
-    "@writetome51/get-sum-average-product": "~1.0.5",
-    "@writetome51/get-array-from-property": "~1.1.1"
+    "@writetome51/get-sum-average-product": "^2.0.0",
+    "@writetome51/get-array-from-property": "^2.0.0"
   }
 }
